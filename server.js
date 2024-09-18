@@ -8,7 +8,7 @@ const app = express();
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '',  // Replace with your MySQL password
+  password: '',  
   database: 'quiz_app'
 });
 

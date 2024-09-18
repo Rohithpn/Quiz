@@ -1,5 +1,9 @@
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
   }
   
   #quiz-container {
@@ -16,3 +20,58 @@ body {
     margin-top: 20px;
     font-weight: bold;
   }
+  /* Hide the default radio button */
+input[type="radio"] {
+  display: none;
+}
+
+/* Style the container (label) */
+.radio-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 15px;
+ 
+}
+
+/* Create a custom radio button */
+.radio-checkmark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background: #fff;
+}
+
+/* Style the radio button when checked */
+input[type="radio"]:checked + .radio-checkmark {
+  border-color: #007bff;
+}
+
+input[type="radio"]:checked + .radio-checkmark::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #007bff;
+}
+.option
+{
+  border: 1px solid black;
+  width: 400px;
+  padding: 10px 5px;
+  margin: 10px 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
