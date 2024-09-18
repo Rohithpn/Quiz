@@ -8,13 +8,24 @@
   <script defer src="js/quiz.js"></script>
 </head>
 <body>
-  <div>
-    <div id="quiz-container">
-    </div>
-    <div>
-      <button id="next-btn">Next</button>
-    <button id="submit-btn" style="display: none;" >Submit Quiz</button>
-    <div id="result"></div>
+  <div class="side-bar-left">
+    <h1>Test Your Brain!</h1>
+    <p>Don't let it sleep</p>
+    <img src="./assests/Brain.jpg" alt="Brain">
+  </div>
+  <div class="side-bar-right">
+    <div class="content">
+      <div id="quiz-container">
+      </div>
+      <div class="buttons">
+        <button id="next-btn">Next</button>
+      <button id="submit-btn" style="display: none;" >Submit Quiz</button>
+      <div id="result-container" style="display: none;">
+        <h2 id="result-score"></h2>
+        <h2 id="result-message"></h2>
+        <p id="result-content"></p>
+      </div>
+      </div>
     </div>
   </div>
 </body>

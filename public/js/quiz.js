@@ -4,7 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const quizContainer = document.getElementById('quiz-container');
   const nextBtn = document.getElementById('next-btn');
   const submitBtn = document.getElementById('submit-btn');
-  const resultDiv = document.getElementById('result');
+  const resultContainer = document.getElementById('result-container');
+  const resultMessage = document.getElementById('result-message');
+  const resultImage = document.getElementById('result-image');
+  const resultContent = document.getElementById('result-content');
+  const resultScore = document.getElementById('result-score');
 
   let questions = [];
 
@@ -79,8 +83,27 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(response => response.json())
     .then(data => {
-      resultDiv.innerHTML = `Your score is: ${data.score}`;
-      submitBtn.style.display = 'none';
+      const score = data.score;  // Assume the server returns the score
+
+      resultContainer.style.display = 'block';  // Show the result container
+      quizContainer.style.display = 'none';  // Hide the quiz container
+      
+      // Display the score
+      resultScore.textContent = `Your score: ${score} / ${questions.length}`;
+
+      // Display the result message, image, and content based on score
+      if (score === questions.length) {
+        resultMessage.textContent = 'Excellent!';
+        resultContent.textContent = 'You got all the questions correct! Fantastic job!';
+      } else if (score >= questions.length * 0.7) {
+        resultMessage.textContent = 'Good Job!';
+        resultContent.textContent = 'You did well! Keep up the good work.';
+      } else {
+        resultMessage.textContent = 'Better Luck Next Time!';
+        resultContent.textContent = 'Don’t worry, you can try again and improve.';
+      }
+  
+      submitBtn.style.display = 'none';  // Hide the "Submit" button after showing results
     });
   });
 });

@@ -1,9 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
     height: 100vh;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr ;
+    margin: 0px;
   }
   
   #quiz-container {
@@ -12,20 +13,33 @@ body {
   
   button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
+  }
+
+  #next-btn
+  {
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    transition: 0.2s;
+  }
+  #next-btn:hover
+  {
+    background-color:hsl(211, 91%, 54%);
   }
   
   #result {
-    margin-top: 20px;
     font-weight: bold;
+    font-size: xx-large;
   }
-  /* Hide the default radio button */
+
 input[type="radio"] {
   display: none;
 }
 
-/* Style the container (label) */
+
 .radio-container {
   display: flex;
   align-items: center;
@@ -36,7 +50,7 @@ input[type="radio"] {
  
 }
 
-/* Create a custom radio button */
+
 .radio-checkmark {
   position: absolute;
   left: 0;
@@ -49,7 +63,7 @@ input[type="radio"] {
   background: #fff;
 }
 
-/* Style the radio button when checked */
+
 input[type="radio"]:checked + .radio-checkmark {
   border-color: #007bff;
 }
@@ -74,4 +88,55 @@ input[type="radio"]:checked + .radio-checkmark::after {
   display: flex;
   align-items: center;
   border-radius: 10px;
+}
+.content
+{
+  border: 2px solid gray;
+  width: 50%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better contrast */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #aea6a688;
+}
+.side-bar-right
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assests/question_marks_background.jpg"); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; 
+  height: 100vh; 
+}
+.side-bar-left
+{
+  background-color: hsla(211, 83%, 40%, 0.632);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.side-bar-left h1
+{
+  color: white;
+  margin-bottom: 0px;
+}
+.side-bar-left p
+{
+  color: white;
+  margin-top: 2px;
+}
+.side-bar-left img
+{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
