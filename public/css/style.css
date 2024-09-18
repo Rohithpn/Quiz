@@ -93,7 +93,7 @@ input[type="radio"]:checked + .radio-checkmark::after {
 {
   border: 2px solid gray;
   width: 50%;
-  height: 35%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
