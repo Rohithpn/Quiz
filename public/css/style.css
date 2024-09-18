@@ -107,6 +107,7 @@ input[type="radio"]:checked + .radio-checkmark::after {
 }
 .side-bar-right
 {
+  
   display: flex;
   justify-content: center;
   align-items: center;
