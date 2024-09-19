@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const submitBtn = document.getElementById('submit-btn');
   const resultContainer = document.getElementById('result-container');
   const resultMessage = document.getElementById('result-message');
-  const resultImage = document.getElementById('result-image');
   const resultContent = document.getElementById('result-content');
   const resultScore = document.getElementById('result-score');
 
