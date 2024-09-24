@@ -36,6 +36,8 @@ body {
     background-color: #3dc13d;
     color: white;
     transition: 0.2s;
+    margin: 0px;
+    grid-row: span 2;
   }
   #submit-btn:hover
   {
@@ -128,6 +130,10 @@ input[type="radio"]:checked + .radio-checkmark::after {
   background-size: cover; 
   background-position: center; 
   height: 100vh; 
+  flex-direction: column;
+  gap: 100px;
+
+  
 }
 .side-bar-left
 {
@@ -158,4 +164,42 @@ input[type="radio"]:checked + .radio-checkmark::after {
   width: 100px;
   height: 100px;
 
+}
+.info-content
+{
+  display: flex;
+  flex-direction:row;
+  gap: 10px;
+}
+.info
+{
+    border: solid grey 2px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 100px;
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.534);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: rgba(29, 27, 27, 0.65);
+
+}
+.info img{
+    width: 100px;
+    height: 100px;
+    border-radius:50%;
+    grid-row: span 3;
+}
+.info div h3,p{
+    margin: 0px 5px;
+}
+.info:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
