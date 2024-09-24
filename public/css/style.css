@@ -27,7 +27,19 @@ body {
   }
   #next-btn:hover
   {
-    background-color:hsl(211, 91%, 54%);
+    background-color:hwb(211 27% 5%);
+  }
+  #submit-btn
+  {
+    border-radius: 10px;
+    border: none;
+    background-color: #3dc13d;
+    color: white;
+    transition: 0.2s;
+  }
+  #submit-btn:hover
+  {
+    background-color: hsl(120, 72%, 49%);
   }
   
   #result {
@@ -140,4 +152,10 @@ input[type="radio"]:checked + .radio-checkmark::after {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+.result-img
+{
+  width: 100px;
+  height: 100px;
+
 }

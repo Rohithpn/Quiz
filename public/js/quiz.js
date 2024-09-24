@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const resultMessage = document.getElementById('result-message');
   const resultContent = document.getElementById('result-content');
   const resultScore = document.getElementById('result-score');
+  var resultImg = document.getElementById('result-img')
 
   let questions = [];
 
@@ -83,13 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data => {
       const score = data.score;  // Assume the server returns the score
-
+  
       resultContainer.style.display = 'block';  // Show the result container
       quizContainer.style.display = 'none';  // Hide the quiz container
       
       // Display the score
       resultScore.textContent = `Your score: ${score} / ${questions.length}`;
-
+  
       // Display the result message, image, and content based on score
       if (score === questions.length) {
         resultMessage.textContent = 'Excellent!';
