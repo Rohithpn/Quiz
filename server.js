@@ -23,7 +23,7 @@ app.use(cors());
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/quiz.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 // Fetch 10 random quiz questions
@@ -56,7 +56,7 @@ app.post('/submit', (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 5151;
+const PORT = process.env.PORT || 5150;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
